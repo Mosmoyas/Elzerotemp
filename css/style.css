@@ -1026,7 +1026,7 @@ a {
     .our-skills img {
         display: none;
     }
-} */
+} 
 /*---------------ELZEROO------------------------------*/
 @media(max-width:767px) {
     .our-skills .container {
@@ -1107,15 +1107,8 @@ a {
 }
 
 .workspace .container img {
-    max-width: 100%;
-    margin-right: 100px;
+    max-width: 90%;
 }
-
-/* @media(min-width:768px) and (max-width:991px) {
-    .workspace .container img {
-        display: none
-    }
-} */
 
 .workspace .container .works {
     flex: 1;
@@ -1134,16 +1127,14 @@ a {
 
 .workspace .container .works .work-box {
     background-color: #f6f5f5;
-    padding: 30px;
-    margin-bottom: 20px;
+    padding-left: 1px;
+    margin-bottom: 10px;
     border-radius: 6px;
     display: flex;
-    justify-content: flex-start;
     border: 2px solid white;
     align-items: center;
-    min-width: 600px;
+    min-width: 450px;
     align-items: center;
-    /**/
     position: relative;
     z-index: 1;
 }
@@ -1166,28 +1157,19 @@ a {
     width: 100%;
 }
 
-@media(max-width:991px) {
-    .workspace .container .works .work-box {
-        flex-direction: column;
-        align-items: center;
-        padding-top: 30px;
-    }
-}
+
 
 .workspace .container .works .work-box i {
     font-size: 50px;
-    /* align-self: flex-start;
-    margin-top: 50px; */
-    color: var(--mainColor);
-
+    color: var(--mainColor)
 }
 
 .workspace .container .works .work-box h3 {
-    margin: 30px 20px;
+    margin: 15px 20px;
 }
 
 .workspace .container .works .work-box p {
-    margin: 10px 20px 8px;
+    margin: 10px 20px 10px;
     line-height: 1.6;
     color: #777
 }
@@ -1217,41 +1199,82 @@ a {
 .events {
     padding-top: var(--main-padding-top);
     padding-bottom: var(--main-padding-bottom);
-    /* background-color: var(--background-color-scetion); */
 }
 
 .events .container {
     display: flex;
     justify-content: space-between;
     align-items: center;
-    flex-direction: column;
+    flex-wrap: wrap;
+
+}
+
+.events .container img {
+    max-width: 100%;
+    position: relative;
+    top: -50px;
+}
+
+@media (max-width:676px) {
+    .events .container {
+        flex-direction: column;
+    }
 }
 
 .events .container .event {
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
+    margin: auto;
 }
 
-.events .container .event img {
-    margin-right: 15px;
-    max-width: 100%;
+@media (max-width:991px) {
+    .events .container img {
+        display: none;
+    }
 }
 
-.events .info .date {
-    display: flex;
-    justify-content: center;
+@media (max-width:676px) {
+    .events .event img {
+        max-width: 100%;
+    }
 }
 
-.events .info .date>span {
-    padding: 35px 10px;
+.events .info .time>div {
+    display: inline-block;
     border: 1px solid #c5c5c5;
-    position: relative;
-    margin: 10px;
+    margin: 5px;
     border-radius: 8px;
     font-size: 25px;
     color: var(--mainColor);
+    width: 60px;
+    height: 100px;
+    position: relative;
+    transition: var(--transitionDuration);
+}
 
+.events .info .time div span {
+    display: block;
+}
+
+.events .info .time div span:first-of-type {
+    padding-top: 15px;
+    font-weight: bold;
+}
+
+.events .info .time div span:last-of-type {
+    position: absolute;
+    font-size: 12px;
+    bottom: 5px;
+    left: 50%;
+    transform: translate(-50%);
+    border-top: 1px solid #c5c5c5;
+    width: 100%;
+    padding: 5px;
+    transition: var(--transitionDuration);
+
+}
+
+.events .info .time div:hover,
+.events .info .time div:hover span {
+    border-color: var(--mainColor);
 }
 
 .events .info {
@@ -1260,8 +1283,8 @@ a {
 }
 
 .events .info h2 {
-    margin-top: 15px;
-    margin-bottom: 15px;
+    margin-top: 25px;
+    margin-bottom: 25px;
 
 }
 
@@ -1271,33 +1294,222 @@ a {
     line-height: 1.8;
 }
 
-.events input[type=text] {
-    padding: 15px;
-    border-radius: 9px;
-    width: 380px;
-    border: 1px solid #888;
+.events form {
 
-
+    width: 600px;
+    margin: 30px auto;
+    padding: 30px 40px;
+    background-color: #f6f5f5;
+    border-radius: 50px;
+    gap: 20px;
+    display: flex;
 }
 
-.events input[type=text]:focus {
-
-    outline-style: none;
+@media (max-width:676px) {
+    .events form {
+        max-width: 400px;
+        flex-direction: column;
+        border-radius: 0;
+    }
 }
 
-.events input[type=button] {
+.events input[type=email] {
+    padding: 20px;
+    border-radius: 50px;
+    border: none;
+    caret-color: var(--mainColor);
+    flex: 1
+}
+
+@media (max-width:676px) {
+    .events input[type=email] {
+        border-radius: 0;
+    }
+}
+
+.events input[type=email]:focus {
+    outline: none
+}
+
+.events input[type=email]::placeholder {
+    transition: opacity var(--transitionDuration);
+}
+
+.events input[type=email]:focus::placeholder {
+    opacity: 0;
+}
+
+.events input[type=submit] {
     background-color: var(--mainColor);
     color: white;
     border: 1px solid var(--mainColor);
-    padding: 15px;
-    width: 180px;
-    border-radius: 9px;
-    max-height: ;
+    padding: 20px;
+    border-radius: 50px;
+    cursor: pointer;
+    transition: var(--transitionDuration);
+    font-weight: bold;
+}
+
+@media (max-width:676px) {
+    .events input[type=submit] {
+        border-radius: 0;
+        width: 100%;
+    }
+}
+
+.events input[type=submit]:hover {
+    background-color: var(--transparent-color);
 
 }
 
 /* End Events */
 
+/* Start Pricing */
+.pricing {
+    padding-top: var(--main-padding-top);
+    padding-bottom: var(--main-padding-bottom);
+    background-color: var(--background-color-scetion);
+}
+
+.pricing .container {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
+    gap: 40px;
+    position: relative;
+
+}
+
+.pricing .container .price-holder {
+    transform: translateY(-10px);
+}
+
+.pricing .container .price-holder {
+    margin: auto;
+    background-color: white;
+    padding: 30px;
+    min-width: 75%;
+    box-shadow: 2px 3px 5px rgb(128 128 128 / 12%), -2px -3px 5px rgb(128 128 128 / 22%);
+    transition: var(--transitionDuration);
+    position: relative;
+
+}
+
+.pricing .container .price-holder::before,
+.pricing .container .price-holder::after {
+    content: "";
+    position: absolute;
+    background-color: #f5f6f6;
+    height: 50%;
+    width: 0;
+    transition: var(--transitionDuration);
+    z-index: -1;
+}
+
+.pricing .container .price-holder::before {
+    top: 0;
+    left: 0;
+}
+
+.pricing .container .price-holder::after {
+    bottom: 0;
+    right: 0;
+}
+
+.pricing .container .price-holder:hover::before,
+.pricing .container .price-holder:hover::after {
+    width: 100%;
+}
+
+.pricing .price-holder.popular .label {
+    writing-mode: vertical-rl;
+    position: absolute;
+    right: 30px;
+    background-color: var(--mainColor);
+    color: white;
+    padding: 8px;
+    top: 0;
+    height: 130px;
+    font-weight: bold;
+
+}
+
+.pricing .price-holder.popular .label::after {
+    content: "";
+    position: absolute;
+    border: 17px solid;
+    right: 0;
+    bottom: 0px;
+    border-color: transparent transparent white transparent;
+}
+
+.pricing .price-holder .type {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+.pricing .price-holder .type img {
+    margin: 20px;
+}
+
+.pricing .price-holder .type .text span {
+    text-align: center;
+    display: block;
+}
+
+.pricing .price-holder .type .text .money {
+    font-size: 40px;
+    font-weight: bold;
+    color: var(--mainColor);
+}
+
+.pricing .price-holder .type .text .period {
+    font-size: 12px;
+    font-weight: normal;
+    color: #777;
+
+}
+
+
+.pricing .price-holder .offers {
+    margin: 30px auto;
+}
+
+.pricing .price-holder .offers>li {
+    border-bottom: 1px solid #eee;
+    padding: 10px;
+}
+
+.pricing .price-holder .offers li::before {
+    font-family: "Font Awesome 5 Free";
+    content: "\f00c";
+    font-weight: 900;
+    color: var(--mainColor);
+    margin-right: 15px;
+}
+
+.pricing .price-holder a {
+    display: block;
+    width: fit-content;
+    background-color: white;
+    color: var(--mainColor);
+    border: 1px solid var(--mainColor);
+    padding: 10px 20px;
+    border-radius: 18px;
+    margin: 5px auto;
+    font-weight: bold;
+    transition: all .6s;
+}
+
+.pricing .price-holder a:hover {
+    color: white;
+    background-color: var(--mainColor);
+    /* border: 1px solid var(--mainColor); */
+
+}
+
+/* End Pricing */
 /*Start Animaion*/
 
 @keyframes vibration {
