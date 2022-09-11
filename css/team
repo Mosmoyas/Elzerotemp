@@ -1,0 +1,89 @@
+/* Start Team */
+
+/* <div class="container"><div class="box"><img src="images/diesny.jpg" alt=""><div class="icons"><a href="#"><i class="fa-brands fa-whatsapp"></i></a><a href="#"><i class="fa-brands fa-facebook-f"></i><a href="#"><i class="fa-brands fa-whatsapp"></i><a href="#"><i class="fa-brands fa-facebook-f"></i><a href="#"><i class="fa-brands fa-whatsapp"></i></a></div><div class="text"><h3>Home</h3><p>Lorem ipsum,
+dolor sit amet.</p></div></div><div class="box"><img src="images/diesny.jpg" alt=""><div class="icons"><a href="#"><i class="fa-brands fa-whatsapp"></i></a><a href="#"><i class="fa-brands fa-facebook-f"></i><a href="#"><i class="fa-brands fa-whatsapp"></i><a href="#"><i class="fa-brands fa-facebook-f"></i><a href="#"><i class="fa-brands fa-whatsapp"></i></a></div><div class="text"><h3>Home</h3><p>Lorem ipsum,
+dolor sit amet.</p></div></div><div class="box"><img src="images/diesny.jpg" alt=""><div class="icons"><a href="#"><i class="fa-brands fa-whatsapp"></i></a><a href="#"><i class="fa-brands fa-facebook-f"></i><a href="#"><i class="fa-brands fa-whatsapp"></i><a href="#"><i class="fa-brands fa-facebook-f"></i><a href="#"><i class="fa-brands fa-whatsapp"></i></a></div><div class="text"><h3>Home</h3><p>Lorem ipsum,
+dolor sit amet.</p></div></div><div class="box"><img src="images/diesny.jpg" alt=""><div class="icons"><a href="#"><i class="fa-brands fa-whatsapp"></i></a><a href="#"><i class="fa-brands fa-facebook-f"></i><a href="#"><i class="fa-brands fa-whatsapp"></i><a href="#"><i class="fa-brands fa-facebook-f"></i><a href="#"><i class="fa-brands fa-whatsapp"></i></a></div><div class="text"><h3>Home</h3><p>Lorem ipsum,
+dolor sit amet.</p></div></div><div class="box"><img src="images/diesny.jpg" alt=""><div class="icons"><a href="#"><i class="fa-brands fa-whatsapp"></i></a><a href="#"><i class="fa-brands fa-facebook-f"></i><a href="#"><i class="fa-brands fa-whatsapp"></i><a href="#"><i class="fa-brands fa-facebook-f"></i><a href="#"><i class="fa-brands fa-whatsapp"></i></a></div><div class="text"><h3>Home</h3><p>Lorem ipsum,
+dolor sit amet.</p></div></div><div class="box"><img src="images/diesny.jpg" alt=""><div class="icons"><a href="#"><i class="fa-brands fa-whatsapp"></i></a><a href="#"><i class="fa-brands fa-facebook-f"></i><a href="#"><i class="fa-brands fa-whatsapp"></i><a href="#"><i class="fa-brands fa-facebook-f"></i><a href="#"><i class="fa-brands fa-whatsapp"></i></a></div><div class="text"><h3>Home</h3><p>Lorem ipsum,
+dolor sit amet.</p></div></div><div class="box"><img src="images/diesny.jpg" alt=""><div class="icons"><a href="#"><i class="fa-brands fa-whatsapp"></i></a><a href="#"><i class="fa-brands fa-facebook-f"></i><a href="#"><i class="fa-brands fa-whatsapp"></i><a href="#"><i class="fa-brands fa-facebook-f"></i><a href="#"><i class="fa-brands fa-whatsapp"></i></a></div><div class="text"><h3>Home</h3><p>Lorem ipsum,
+dolor sit amet.</p></div></div><div class="box"><img src="images/diesny.jpg" alt=""><div class="icons"><a href="#"><i class="fa-brands fa-whatsapp"></i></a><a href="#"><i class="fa-brands fa-facebook-f"></i><a href="#"><i class="fa-brands fa-whatsapp"></i><a href="#"><i class="fa-brands fa-facebook-f"></i><a href="#"><i class="fa-brands fa-whatsapp"></i></a></div><div class="text"><h3>Home</h3><p>Lorem ipsum,
+dolor sit amet.</p></div></div><div class="box"><img src="images/diesny.jpg" alt=""><div class="icons"><a href="#"><i class="fa-brands fa-whatsapp"></i></a><a href="#"><i class="fa-brands fa-facebook-f"></i><a href="#"><i class="fa-brands fa-whatsapp"></i><a href="#"><i class="fa-brands fa-facebook-f"></i><a href="#"><i class="fa-brands fa-whatsapp"></i></a></div><div class="text"><h3>Home</h3><p>Lorem ipsum,
+dolor sit amet.</p></div></div><div class="box"><img src="images/diesny.jpg" alt=""><div class="icons"><a href="#"><i class="fa-brands fa-whatsapp"></i></a><a href="#"><i class="fa-brands fa-facebook-f"></i><a href="#"><i class="fa-brands fa-whatsapp"></i><a href="#"><i class="fa-brands fa-facebook-f"></i><a href="#"><i class="fa-brands fa-whatsapp"></i></a></div><div class="text"><h3>Home</h3><p>Lorem ipsum,
+dolor sit amet.</p></div></div><div class="box"><img src="images/diesny.jpg" alt=""><div class="icons"><a href="#"><i class="fa-brands fa-whatsapp"></i></a><a href="#"><i class="fa-brands fa-facebook-f"></i><a href="#"><i class="fa-brands fa-whatsapp"></i><a href="#"><i class="fa-brands fa-facebook-f"></i><a href="#"><i class="fa-brands fa-whatsapp"></i></a></div><div class="text"><h3>Home</h3><p>Lorem ipsum,
+dolor sit amet.</p></div></div><div class="box"><img src="images/diesny.jpg" alt=""><div class="icons"><a href="#"><i class="fa-brands fa-whatsapp"></i></a><a href="#"><i class="fa-brands fa-facebook-f"></i><a href="#"><i class="fa-brands fa-whatsapp"></i><a href="#"><i class="fa-brands fa-facebook-f"></i><a href="#"><i class="fa-brands fa-whatsapp"></i></a></div><div class="text"><h3>Home</h3><p>Lorem ipsum,
+ dolor sit amet.</p></div></div></div> */
+/*.team {
+    padding-top: var(--main-padding-top);
+    padding-bottom: var(--main-padding-bottom);
+}
+
+.team .container {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
+    gap: 100px;
+}
+
+.team .container .box {
+    display: flex;
+    flex-wrap: wrap;
+    background-color: #e5e5e5;
+    gap: 15px;
+    transition: .5s;
+    background: linear-gradient(to left, #e5e5e5 50%, #f5f5f5 50%);
+    background-size: 200% 100%;
+    background-position: left bottom;
+    ;
+}
+
+.team .container .box:hover {
+    background-position: right bottom;
+}
+
+.team .container .box img {
+    flex: 1;
+    position: relative;
+    max-width: 100%;
+    margin-left: -50px;
+    margin-top: 50px;
+    box-shadow: -2px 2px 3px #ccccca, -2px -3px 11px #ccccca;
+    border-radius: 8px;
+}
+
+.team .container .box img:hover {
+    filter: grayscale(100%);
+}
+
+.team .container .box .icons {
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+    justify-content: center;
+    align-items: center;
+}
+
+.team .container .box .icons i {
+    align-self: center;
+}
+
+.team .container .text {
+    padding: 15px;
+}
+
+.team .container h3 {
+    margin: 0 auto 10px;
+    color: var(--mainColor);
+    transition: .5s;
+}
+
+.team .container .box:hover .text h3 {
+    color: #a8a1a1;
+}
+
+.team .container p {
+    color: #777;
+} */
+
+
+
+/* End Team */

@@ -1,0 +1,181 @@
+/* Start Vriables*/
+:root {
+    --transitionDuration: 0.3s;
+    --mainColor: #2196F3;
+    --transparent-color: #1787e0;
+    --Section-padding: 100px
+}
+
+/* Ended Vriables */
+
+/* Start Global Rules  */
+* {
+    -moz-box-sizing: border-box;
+    -webkit-box-sizing: border-box;
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+html {
+    scroll-behavior: smooth;
+}
+
+body {
+    font-family: "Cairo", sans-serif;
+}
+
+ul {
+    list-style: none;
+    margin: 0;
+    padding: 0;
+}
+
+a {
+    text-decoration: none;
+}
+
+.container {
+    padding-left: 15px;
+    padding-right: 15px;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+/* Small devices (landscape phones, 576px and up) */
+
+@media (min-width:576px) {
+    .container {
+        width: 600px;
+    }
+}
+
+/* Medium devices (tablets, 768px and up) The navbar toggle appears at this breakpoint */
+@media (min-width: 768px) {
+    .container {
+        width: 750px;
+    }
+}
+
+/* Large devices (desktops, 992px and up) */
+@media (min-width: 992px) {
+    .container {
+        width: 970px;
+    }
+}
+
+/* Extra large devices (large desktops, 1200px and up) */
+@media (min-width: 1200px) {
+    .container {
+        width: 1170px;
+    }
+}
+
+/* Extra extra large devices (extra large desktops, 1400px and up) */
+@media (min-width: 1400px) {
+    .container {
+        width: 1300px;
+    }
+}
+
+/* Ended Globale Rules  */
+
+/* Start Header */
+.header {
+    padding-top: 20px;
+}
+
+.header .container {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    flex-wrap: wrap;
+    transition: var(--transitionDuration);
+
+
+}
+
+.header .container .logo {
+    height: 73px;
+    align-items: center;
+    display: flex;
+    color: rgb(253, 247, 249);
+    padding: 8px;
+    box-shadow: -2px 4px 3px rgb(165, 137, 192), 2px -2px 3px rgb(161, 252, 70);
+    background-color: #2196F3;
+    font-size: 2em;
+    transition: var(--transitionDuration);
+
+}
+
+@media(max-width:767px) {
+    .header .container .logo {
+        width: 100%;
+        justify-content: center;
+    }
+}
+
+.header .container .navbar {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    transition: var(--transitionDuration);
+
+}
+
+@media(max-width:767px) {
+    .header .container .navbar {
+        margin: 20px auto;
+    }
+}
+
+
+.header .container .navbar>li {
+    padding: 15px;
+    position: relative;
+    border-radius: 6px;
+    background-color: beige;
+    margin-right: 10px;
+    transition: var(--transitionDuration);
+
+}
+
+.header .container .navbar>li:hover {
+    background-color: var(--mainColor);
+
+}
+
+.header .container .navbar>li::before {
+    content: '';
+    position: absolute;
+    bottom: -10px;
+    right: 100%;
+    width: 0;
+    left: -1px;
+    height: 3px;
+
+    background-color: var(--transparent-color);
+    transition: var(--transitionDuration);
+
+}
+
+
+.header .container .navbar>li:hover::before {
+    width: 82px;
+}
+
+
+.header .container .navbar>li:hover>a {
+    color: white;
+}
+
+
+.header .container .navbar>li>a {
+    color: saddlebrown;
+    font-size: 18px;
+    font-weight: 600;
+    height: 82px;
+}
+
+
+/* End Header */

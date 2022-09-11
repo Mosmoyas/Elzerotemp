@@ -1,0 +1,391 @@
+/* Start Vriables*/
+:root {
+    --transitionDuration: 0.3s;
+    --mainColor: #2196F3;
+    --transparent-color: #1787e0;
+    --Section-padding: 100px
+}
+
+/* Ended Vriables */
+
+/* Start Global Rules  */
+* {
+    -moz-box-sizing: border-box;
+    -webkit-box-sizing: border-box;
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+html {
+    scroll-behavior: smooth;
+}
+
+body {
+    font-family: "Cairo", sans-serif;
+}
+
+ul {
+    list-style: none;
+    margin: 0;
+    padding: 0;
+}
+
+a {
+    text-decoration: none;
+}
+
+.container {
+    padding-left: 15px;
+    padding-right: 15px;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+/* Small devices (landscape phones, 576px and up) */
+
+@media (min-width:576px) {
+    .container {
+        width: 600px;
+    }
+}
+
+/* Medium devices (tablets, 768px and up) The navbar toggle appears at this breakpoint */
+@media (min-width: 768px) {
+    .container {
+        width: 750px;
+    }
+}
+
+/* Large devices (desktops, 992px and up) */
+@media (min-width: 992px) {
+    .container {
+        width: 970px;
+    }
+}
+
+/* Extra large devices (large desktops, 1200px and up) */
+@media (min-width: 1200px) {
+    .container {
+        width: 1170px;
+    }
+}
+
+/* Extra extra large devices (extra large desktops, 1400px and up) */
+@media (min-width: 1400px) {
+    .container {
+        width: 1300px;
+    }
+}
+
+/* Ended Globale Rules  */
+
+/* Start Header */
+.header {
+    background-color: white;
+    box-shadow: 0 0 10px #dddd;
+    position: relative;
+    /* margin-top: 30px; */
+
+}
+
+.header .container {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    flex-wrap: wrap;
+    transition: var(--transitionDuration);
+    /*add*/
+    position: relative;
+
+}
+
+.header .container .logo {
+    display: flex;
+    align-items: center;
+    font-size: 2em;
+    height: 72px;
+    transition: var(--transitionDuration);
+    /*added*/
+    justify-content: center;
+    color: var(--mainColor);
+    /* box-shadow: 0 0 6px rgba(6, 0, 92, 0.57) */
+}
+
+@media(max-width:767px) {
+    .header .container .logo {
+        width: 100%;
+        /* justify-content: center; */
+    }
+}
+
+.header .container .navbar {
+    display: flex;
+
+}
+
+@media(max-width:767px) {
+    .header .container .navbar {
+        margin: auto;
+    }
+}
+
+.header .container .navbar .mega-menu {
+    display: flex;
+    gap: 40px;
+    position: absolute;
+    top: calc(100%+72px);
+    left: 0;
+    background-color: white;
+    z-index: 100;
+    border-bottom: 1px solid var(--mainColor);
+    transition: var(--transitionDuration);
+    display: none;
+
+}
+
+@media(max-width:767px) {
+    .header .container .navbar .mega-menu {
+
+        flex-direction: column;
+    }
+}
+
+.header .mega-menu .mega-img img {
+    max-width: 100%;
+    transition: var(--transitionDuration);
+}
+
+@media(max-width:767px) {
+    .header .mega-menu .mega-img {
+        display: none;
+    }
+}
+
+@media(min-width:768px) {
+    .header .mega-menu .mega-img {
+        width: 50%;
+    }
+
+}
+
+.header .mega-menu .mega-items {
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+    padding: 20px;
+    transition: var(--transitionDuration);
+
+}
+
+.header .mega-menu .mega-items li {
+    padding: 5px;
+}
+
+@media(max-width:767px) {
+    .header .mega-menu .mega-items.right li:first-of-type {
+        margin-top: -35px;
+    }
+}
+
+@media(min-width:768px) {
+    .header .mega-menu .mega-items li {
+        width: 250px;
+    }
+}
+
+.header .container .navbar>li>a {
+
+    font-weight: 600;
+    font-size: 18px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 72px;
+    position: relative;
+    color: black;
+    padding: 0 30px;
+    transition: .4s;
+
+}
+
+@media(max-width:767px) {
+    .header .container .navbar>li>a {
+        padding: 10px;
+        font-size: 16px;
+    }
+}
+
+.header .container .navbar>li:hover>a {
+    /**/
+    color: white;
+    background-color: var(--mainColor);
+    height: 60%;
+    margin-top: 15px;
+
+}
+
+.header .navbar>li:hover:last-of-type .mega-menu {
+    display: flex;
+}
+
+.header .container .navbar>li>a::before {
+    content: '';
+    position: absolute;
+    top: -10px;
+    right: 100%;
+    width: 0;
+    left: -1px;
+    height: 3px;
+    background-color: var(--transparent-color);
+    transition: .5s;
+}
+
+
+.header .container .navbar>li:hover a::before {
+
+    width: 100%;
+
+}
+
+
+/* End Header */
+
+/* Start Front-view */
+
+.front-view {
+    position: relative;
+}
+
+.front-view::before {
+    content: '';
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    left: 0;
+    top: -30px;
+    background-color: #EEEEEE;
+    transform: skewY(-6deg);
+    transform-origin: top left;
+    z-index: -1;
+
+}
+
+
+.front-view .container {
+    min-height: calc(100vh - 72px);
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding-bottom: 120px;
+    position: relative;
+
+}
+
+.front-view .container .welcome-text {
+    flex: 1;
+}
+
+@media (min-width:992px) {
+    .front-view .container .welcome-text {
+        width: 100%;
+    }
+}
+
+@media (max-width:991px) {
+    .front-view .container .welcome-text {
+        text-align: center;
+        width: 100%;
+
+    }
+}
+
+.front-view .container .welcome-text h1 {
+    color: var(--mainColor);
+    font-weight: normal;
+}
+
+.front-view .container .welcome-text p {
+    color: rgb(126, 125, 125);
+    line-height: 1.8;
+}
+
+.front-view .container .image {
+    display: flex;
+    width: 600px;
+    max-width: 100%;
+    justify-content: flex-end;
+    transition: var(--transitionDuration);
+}
+
+.front-view .container .image img {
+    position: relative;
+    border-radius: 3px;
+    animation-name: vibration;
+    animation-duration: 5s;
+    animation-iteration-count: infinite;
+    animation-timing-function: linear;
+}
+
+@media (max-width:991px) {
+    .front-view .container .image {
+        display: none;
+    }
+}
+
+.front-view .show-down {
+    color: var(--mainColor);
+
+    left: 50%;
+    position: absolute;
+    transform: translateX(-50%);
+    bottom: 30px;
+    transition: var(--transitionDuration);
+}
+
+.front-view .show-down:hover {
+    color: #5c9dd1;
+}
+
+.front-view i {
+    animation: Bouncing 1.5s infinite;
+    transition: var(--transitionDuration);
+}
+
+/* End Front-view */
+
+/*Start Animaion*/
+@keyframes vibration {
+    0% {
+        top: 0;
+    }
+
+    50% {
+        top: -50px
+    }
+
+    100% {
+        top: 0;
+
+    }
+
+}
+
+@keyframes Bouncing {
+
+    0%,
+    10%,
+    20%,
+    50%,
+    80%,
+    100% {
+        transform: translateY(2px);
+    }
+
+    40%,
+    60% {
+        transform: translateY(- 15px);
+    }
+}
+
+/*End Animaion*/
