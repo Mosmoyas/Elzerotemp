@@ -1157,8 +1157,6 @@ a {
     width: 100%;
 }
 
-
-
 .workspace .container .works .work-box i {
     font-size: 50px;
     color: var(--mainColor)
@@ -1510,6 +1508,276 @@ a {
 }
 
 /* End Pricing */
+/* Start Videos */
+.videos {
+    padding-top: var(--main-padding-top);
+    padding-bottom: var(--main-padding-bottom);
+}
+
+.videos .holder {
+    display: flex;
+    justify-content: space-between;
+}
+
+@media (max-width:767px) {
+    .videos .holder {
+        flex-direction: column;
+    }
+
+}
+
+.videos .holder .list {
+    border: 1px solid rgb(199, 199, 199);
+    min-width: 30%;
+
+}
+
+.videos .holder .list .head {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 15px;
+    background-color: var(--background-color-scetion);
+
+}
+
+.videos .holder .list .head h3 {
+    font-size: 22px;
+}
+
+.videos .holder .list .head i {
+    font-size: 22px;
+    transition: var(--transitionDuration)
+}
+
+.videos .holder .list .head:hover i {
+    color: var(--transparent-color);
+}
+
+.videos .holder .list ul li {
+    padding: 15px 5px;
+    border-top: 1px solid rgb(199, 199, 199);
+    font-weight: 700;
+    transition: 0.7s;
+}
+
+.videos .holder .list ul li:hover {
+    background-color: #f2f2f3;
+    color: #1787e0;
+}
+
+.videos .holder .list ul li span {
+    display: block;
+    color: #777;
+    margin-top: 8px;
+    font-weight: normal;
+
+}
+
+.videos .holder .preview {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    padding: 10px;
+    border: 1px solid rgb(199, 199, 199);
+    background-color: var(--background-color-scetion);
+}
+
+.videos .holder .preview img {
+    max-width: 100%;
+}
+
+.videos .holder .preview p {
+    padding: 15px;
+    font-size: 20px;
+    font-weight: 600;
+    background-color: white;
+}
+
+/* End Viedos */
+
+
+/* Start Stets */
+.stets {
+    padding-top: var(--main-padding-top);
+    padding-bottom: var(--main-padding-bottom);
+    position: relative;
+    background-image: url(/images/matrix.webp);
+    background-size: cover;
+}
+
+.stets::before {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: #e6e6e9f3;
+}
+
+.stets h1 {
+    position: relative;
+    text-align: center;
+    padding: 30px;
+
+}
+
+.stets .container {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(250px, 1fr));
+    gap: 30px;
+}
+
+.stets .box {
+    position: relative;
+    padding: 30px 15px;
+    background-color: #e9e7e7;
+    text-align: center;
+}
+
+.stets .box::before,
+.stets .box::after {
+    content: "";
+    position: absolute;
+
+    width: 2px;
+    height: 0;
+    background-color: var(--mainColor);
+    transition: 1s;
+
+}
+
+.stets .box::before {
+    left: 0;
+    top: 0;
+}
+
+.stets .box::after {
+    right: 0;
+    bottom: 0;
+}
+
+.stets .box:hover::before,
+.stets .box:hover::after {
+    height: 100%;
+}
+
+.stets .box i {
+    font-size: 30px;
+}
+
+.stets .box span {
+    display: block;
+    margin-top: 10px;
+}
+
+.stets .box span:first-of-type {
+    font-size: 60px;
+    font-weight: bold;
+}
+
+.stets .box span:last-of-type {
+    font-weight: bold;
+    font-style: italic;
+    color: var(--mainColor);
+    font-size: 20px;
+}
+
+/* End Stets */
+/* Start Discount */
+.discount {
+    margin-top: 30px;
+}
+
+.discount .container {
+    display: flex;
+    justify-content: space-between;
+}
+
+.discount .sale {
+    text-align: center;
+    max-width: 50%;
+    background-image: url(/images/offers.jpg);
+    background-size: cover;
+    position: relative;
+
+    height: 800px;
+
+}
+
+.discount .sale::before {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: #1f91ddb7;
+}
+
+.discount .sale-info {
+    position: relative;
+    color: white;
+    top: 60%;
+    transform: translateY(-60%);
+
+}
+
+.discount .sale-info h2 {
+    margin: 0;
+}
+
+.discount .sale-info p {
+    margin: 30px;
+    padding: 30px;
+    /* font-size: px; */
+    line-height: 2;
+}
+
+
+.discount .sale-info img {
+    max-width: 100%;
+}
+
+.discount form {
+    display: flex;
+    flex-direction: column;
+    margin: auto;
+    width: 400px;
+}
+
+.discount form h2 {
+    text-align: center;
+    margin-bottom: 30px;
+}
+
+.discount form input,
+.discount form textarea {
+    margin: 10px 0;
+    background-color: var(--background-color-scetion);
+    padding: 20px 10px;
+    border: 0;
+    opacity: 1;
+    border-radius: 10px;
+    transition: 1s;
+}
+
+.discount form input:focus,
+.discount form textarea:focus {
+    outline: none;
+
+}
+
+.discount form input:hover::placeholder {
+    opacity: 0;
+}
+
+
+
+
+/* End Discount */
+
 /*Start Animaion*/
 
 @keyframes vibration {
