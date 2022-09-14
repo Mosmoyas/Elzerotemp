@@ -1688,21 +1688,28 @@ a {
 /* Start Discount */
 .discount {
     margin-top: 30px;
+    height: 100vh;
 }
 
 .discount .container {
     display: flex;
     justify-content: space-between;
+    flex-wrap: wrap;
+}
+
+@media(max-width:767px) {
+    .discount .container {
+        display: block;
+    }
 }
 
 .discount .sale {
     text-align: center;
-    max-width: 50%;
+    flex-basis: 50%;
     background-image: url(/images/offers.jpg);
     background-size: cover;
     position: relative;
 
-    height: 800px;
 
 }
 
@@ -1740,12 +1747,12 @@ a {
     max-width: 100%;
 }
 
-.discount form {
-    display: flex;
-    flex-direction: column;
-    margin: auto;
-    width: 400px;
+.discount .form {
+    flex-basis: 50%;
+    margin: 15px auto;
+
 }
+
 
 .discount form h2 {
     text-align: center;
@@ -1754,6 +1761,7 @@ a {
 
 .discount form input,
 .discount form textarea {
+    display: block;
     margin: 10px 0;
     background-color: var(--background-color-scetion);
     padding: 20px 10px;
@@ -1773,9 +1781,120 @@ a {
     opacity: 0;
 }
 
+/* Start Footer */
+.footer {
+    background-color: #171616;
+    padding-top: var(--main-padding-top);
+}
+
+.footer .container {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(250px, 1fr));
+}
+
+.footer .box h2 {
+    color: white;
+    margin-bottom: 30px;
+
+}
+
+.footer .box .social {
+    margin-bottom: 30px;
+}
+
+.footer .box .social a {
+    background-color: #8d8d8c56;
+    padding: 10px 12px;
+    ;
+}
+
+.footer .box .social a i {
+    color: #bbbbb9;
+    font-size: 24px;
+
+}
+
+.footer .box .social a:hover i.fa-facebook {
+    color: #1877f2
+}
+
+.footer .box .social a:hover i.fa-twitter {
+    color: #1da1f2
+}
+
+.footer .box .social a:hover i.fa-youtube {
+    color: #ff0000
+}
 
 
+.footer .box p {
+    color: #929291;
+    line-height: 1.5;
+    margin-top: 30px;
 
+}
+
+.footer .box ul {
+    position: relative;
+}
+
+.footer .box ul li {
+    color: #929291;
+    padding: 10px;
+
+}
+
+.footer .box ul li:not(:last-child) {
+    border-bottom: 1px solid #414141;
+}
+
+.footer .box ul li::before {
+    content: "\f101";
+    font-family: 'Font Awesome 5 Free';
+    font-weight: 900;
+    color: var(--mainColor);
+    margin-right: 10px;
+}
+
+.footer .box .contact {
+    padding: 20px;
+    display: flex;
+}
+
+.footer .box .contact>i {
+    color: var(--mainColor);
+    margin-right: 5px;
+}
+
+.footer .box .contact span {
+    color: #777;
+    /* display: block; */
+
+}
+
+
+.footer .box .footer-gallary {
+    display: flex;
+    flex-wrap: wrap;
+}
+
+.footer .box .footer-gallary .glimg {
+    max-width: 70px;
+    max-height: 75px;
+    background-color: white;
+    padding: 5px;
+    margin: 5px;
+
+}
+
+
+.footer .box .footer-gallary img {
+
+    width: 100%;
+    height: 100%;
+}
+
+/* End Footer */
 /* End Discount */
 
 /*Start Animaion*/
